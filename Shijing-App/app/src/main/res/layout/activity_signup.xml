@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_bg_signin"
+    tools:context=".SignInInActivity">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/editText_tel_signUp"
+        android:layout_width="0dp"
+        android:textColorHint="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="请输入手机"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/editText_password_signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tel_signUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_tel_signUp" />
+
+    <EditText
+        android:id="@+id/editText_password_signUp_repeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请重复输入密码"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tel_signUp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password_signUp" />
+
+    <EditText
+        android:id="@+id/editText_nickName_signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入昵称"
+        android:textColorHint="@color/white"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tel_signUp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password_signUp_repeat" />
+
+    <EditText
+        android:id="@+id/editText_verification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:ems="10"
+        android:hint="请输入验证码"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_password_signUp_repeat"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nickName_signUp" />
+
+    <Button
+        android:id="@+id/button_signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="button_signUp_onClick"
+        android:text="注册"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_password_signUp"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_verification"
+        app:layout_constraintVertical_bias="0.100000005" />
+
+    <Button
+        android:id="@+id/button_getVerification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="button_getVerification_onClick"
+        android:text="获取"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tel_signUp"
+        app:layout_constraintStart_toEndOf="@+id/editText_verification"
+        app:layout_constraintTop_toTopOf="@+id/editText_verification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

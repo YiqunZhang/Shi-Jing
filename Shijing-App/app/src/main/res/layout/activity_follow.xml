@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_bg_follow"
+    tools:context=".FollowActivity">
+
+    <EditText
+        android:id="@+id/editText_follow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="请输入被关注者手机"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/button_followUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_followUser"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="button_followUser_onClick"
+        android:src="@drawable/ui_button_follow"
+        android:text="关注"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_follow" />
+
+    <ListView
+        android:id="@+id/listView_follow"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/listView_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_follow"
+        app:layout_constraintVertical_bias="0.26"
+        app:srcCompat="@drawable/ui_line_follow" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_follow"
+        app:layout_constraintEnd_toStartOf="@+id/editText_follow"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_follow"
+        app:srcCompat="@drawable/ui_view_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

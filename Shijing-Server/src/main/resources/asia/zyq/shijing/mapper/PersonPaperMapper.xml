@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="asia.zyq.shijing.mapper.PersonPaperMapper">
+
+    <select id="getPersonPaperListByUserIdSubsectionId" parameterType="asia.zyq.shijing.beans.ParamsTwoString" resultType="asia.zyq.shijing.pojo.PersonPaper">
+
+
+        SELECT person.id as personId, person.userid,
+               paper.id as paperid, person.star, person.virgin, person.`unlock`,
+               (person.money+paper.money) as money,
+               paper.`name`, paper.subsectionid, paper.type, paper.number, paper.defaultunlock
+        FROM (`user`,paper) LEFT JOIN person on (`user`.id=person.userid and person.paperid=paper.id)
+        WHERE `user`.id = #{param1} and
+            paper.subsectionid = #{param2}
+
+
+    </select>
+
+</mapper>

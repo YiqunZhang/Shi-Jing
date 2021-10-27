@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="asia.zyq.shijing.mapper.PersonMapper">
+
+    <select id="getPersonListByUserId" parameterType="String" resultType="asia.zyq.shijing.pojo.Person">
+        select *
+        from person
+        where userid = #{userId}
+    </select>
+
+
+    <select id="getPersonByUserIdPaperId" parameterType="asia.zyq.shijing.beans.ParamsTwoString"
+            resultType="asia.zyq.shijing.pojo.Person">
+        select *
+        from person
+        where userid = #{param1}
+          and paperid = #{param2}
+    </select>
+
+    <select id="getPersonListByUserIdSubsectionId" parameterType="asia.zyq.shijing.beans.ParamsTwoString"
+            resultType="asia.zyq.shijing.pojo.Person">
+        select person.id,person.money,person.paperid,person.star,
+               person.`unlock`,person.userid,person.virgin
+        from person, paper
+        where paper.id = person.paperid and
+            userid = #{param1} and
+            paper.subsectionid = #{param2}
+    </select>
+
+    <insert id="insertPerson" parameterType="asia.zyq.shijing.pojo.Person">
+        insert into person (id, userid, paperid, star, virgin, `unlock`, money)
+        values (#{id}, #{userId}, #{paperId}, #{star}, #{virgin}, #{unlock}, #{money});
+    </insert>
+
+    <update id="updatePerson" parameterType="asia.zyq.shijing.pojo.Person">
+        update person
+        set userid=#{userId},
+            paperid=#{paperId},
+            star=#{star},
+            virgin=#{virgin},
+            `unlock`=#{unlock},
+            money=#{money}
+        where id = #{id};
+    </update>
+
+
+</mapper>

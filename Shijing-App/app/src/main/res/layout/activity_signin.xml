@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_bg_signin"
+    tools:context=".SignInInActivity">
+
+    <Button
+        android:id="@+id/button_signUpActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="button_signUpActivity_onClick"
+        android:text="新用户注册"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_signIn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_signIn"
+        app:layout_constraintTop_toBottomOf="@+id/button_signIn"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+
+        android:hint="请输入密码"
+
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_tel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_tel"
+        app:layout_constraintTop_toBottomOf="@+id/editText_tel"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <Button
+        android:id="@+id/button_signIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+
+        android:onClick="button_signIn_onClick"
+
+        android:text="登录"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_password"
+        app:layout_constraintStart_toStartOf="@+id/editText_password"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <EditText
+        android:id="@+id/editText_tel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="请输入手机"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您好\n欢迎来到史境"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

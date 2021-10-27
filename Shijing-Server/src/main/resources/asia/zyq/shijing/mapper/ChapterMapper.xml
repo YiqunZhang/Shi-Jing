@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="asia.zyq.shijing.mapper.ChapterMapper">
+
+    <select id="getChapterList" resultType="asia.zyq.shijing.pojo.Chapter">
+        select * from chapter
+    </select>
+
+    <select id="getChapterById" parameterType="String" resultType="asia.zyq.shijing.pojo.Chapter">
+        select * from chapter where id = #{id}
+    </select>
+
+</mapper>

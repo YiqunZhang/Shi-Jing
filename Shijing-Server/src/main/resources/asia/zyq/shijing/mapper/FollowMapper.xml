@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="asia.zyq.shijing.mapper.FollowMapper">
+
+    <select id="getFollowListByUserId" parameterType="String"  resultType="asia.zyq.shijing.pojo.Follow">
+        select * from follow where userid = #{userId}
+    </select>
+
+    <select id="getFollowByFollow" parameterType="asia.zyq.shijing.pojo.Follow"  resultType="asia.zyq.shijing.pojo.Follow">
+        select * from follow where userid = #{userId} and followid = #{followId}
+    </select>
+
+    <insert id="insertFollow" parameterType="asia.zyq.shijing.pojo.Follow">
+        insert into follow (userid, followid) values (#{userId},#{followId})
+    </insert>
+
+    <delete id="deleteFollow" parameterType="asia.zyq.shijing.pojo.Follow">
+        delete from follow where userid = #{userId} and followid = #{followId}
+    </delete>
+
+
+    <select id="getFollowUserRankInfoListByUserId" parameterType="String"  resultType="asia.zyq.shijing.beans.UserRankInfo">
+        select user2.username as username,
+               follow.followid as userid,
+               user2.nickname as nickname,
+               user2.money as money
+
+        FROM follow,`user`,`user` as user2
+        WHERE follow.userid = `user`.id and
+            follow.followid = user2.id and
+            follow.userid = #{userid}
+    </select>
+
+
+</mapper>

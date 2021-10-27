@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Class-Path: spring-boot-starter-json-2.4.2.jar spring-jcl-5.3.3.jar ja
+ ckson-annotations-2.11.4.jar log4j-to-slf4j-2.13.3.jar jakarta.el-3.0
+ .3.jar jaxb-api-2.3.1.jar logback-core-1.2.3.jar okhttp-2.5.0.jar spr
+ ing-aop-5.3.3.jar spring-web-5.3.3.jar commons-logging-1.2.jar spring
+ -boot-2.4.2.jar jackson-databind-2.11.4.jar slf4j-api-1.7.30.jar spri
+ ng-beans-5.3.3.jar javax.activation-api-1.2.0.jar gson-2.8.6.jar spri
+ ng-context-5.3.3.jar mybatis-3.5.2.jar spring-boot-starter-2.4.2.jar 
+ jakarta.annotation-api-1.3.5.jar spring-boot-autoconfigure-2.4.2.jar 
+ spring-boot-starter-tomcat-2.4.2.jar snakeyaml-1.27.jar jackson-modul
+ e-parameter-names-2.11.4.jar jul-to-slf4j-1.7.30.jar mysql-connector-
+ java-8.0.22.jar spring-expression-5.3.3.jar logging-interceptor-2.7.5
+ .jar tencentcloud-sdk-java-3.1.205.jar okio-1.12.0.jar tomcat-embed-w
+ ebsocket-9.0.41.jar jackson-core-2.11.4.jar spring-boot-devtools-2.4.
+ 2.jar spring-webmvc-5.3.3.jar jackson-datatype-jdk8-2.11.4.jar logbac
+ k-classic-1.2.3.jar spring-core-5.3.3.jar tomcat-embed-core-9.0.41.ja
+ r log4j-api-2.13.3.jar spring-boot-starter-web-2.4.2.jar jackson-data
+ type-jsr310-2.11.4.jar spring-boot-starter-logging-2.4.2.jar
+Main-Class: asia.zyq.shijing.ShijingApplication
+
